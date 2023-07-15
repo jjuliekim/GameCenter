@@ -5,7 +5,6 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
-import me.julie.gamecenter.Main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,8 +32,8 @@ public class GameCenterController {
         mainVBox.setStyle("-fx-background-color: #fdeee6");
         gameIndex = 0;
         listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Battleship", "Memory Game"));
-        listOfImages = new ArrayList<>(Arrays.asList("minesweeperPic.png", "wordlePic.jpg", "simonPic.jpg",
-                "battleshipPic2.png", "memoryPic2.png"));
+        listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.jpg", "images/simonPic.jpg",
+                "images/battleshipPic2.jpg", "images/memoryPic2.png"));
         gameName.setText(listOfGames.get(gameIndex));
         image.setImage(Main.getImage(listOfImages.get(gameIndex)));
 
@@ -60,20 +59,14 @@ public class GameCenterController {
 
         playButton.setOnAction(e -> {
             switch (gameIndex) {
-                case 0:
-                    Main.getInstance().getStage().getScene()
-                            .setRoot(Main.getInstance().getMinesweeperScene());
-                    break;
-                case 1:
-                    Main.getInstance().getStage().getScene()
-                            .setRoot(Main.getInstance().getWordleScene());
-                    break;
-                case 2:
-                    Main.getInstance().getStage().getScene()
-                            .setRoot(Main.getInstance().getSimonScene());
-                    break;
-                default:
-                    break;
+                case 0 -> Main.getInstance().getStage().getScene()
+                        .setRoot(Main.getInstance().getMinesweeperScene());
+                case 1 -> Main.getInstance().getStage().getScene()
+                        .setRoot(Main.getInstance().getWordleScene());
+                case 2 -> Main.getInstance().getStage().getScene()
+                        .setRoot(Main.getInstance().getSimonScene());
+                default -> {
+                }
             }
         });
     }

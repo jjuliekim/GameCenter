@@ -32,16 +32,16 @@ public class Main extends Application {
         mainStage = stage;
 
         menuScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("game-center.fxml")));
+                .getResource("fxml/game-center.fxml")));
         System.out.println("Loaded Game Center");
         minesweeperScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("minesweeper.fxml")));
+                .getResource("fxml/minesweeper.fxml")));
         System.out.println("Loaded Minesweeper");
         wordleScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("wordle-board.fxml")));
+                .getResource("fxml/wordle-board.fxml")));
         System.out.println("Loaded Wordle");
         simonScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("simon.fxml")));
+                .getResource("fxml/simon.fxml")));
         System.out.println("Loaded Simon");
         // battleshipScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("battleship.fxml")));
         // cardMemoryScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("card-memory.fxml")));
@@ -53,7 +53,7 @@ public class Main extends Application {
     }
 
     public static Image getImage(String s) {
-        return new Image(Objects.requireNonNull(Main.class.getResourceAsStream(s)));
+        return new Image("./" + s);
     }
 
     public static Main getInstance() {
