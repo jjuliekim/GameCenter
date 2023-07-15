@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Scene?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.simon.SimonController">
+    <AnchorPane prefHeight="200" prefWidth="200">
+      <children>
+         <VBox fx:id="mainVbox" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0" spacing="10.0">
+            <children>
+               <Label text="Simon Says">
+                  <font>
+                     <Font name="Jokerman" size="53.0" />
+                  </font>
+               </Label>
+               <GridPane alignment="TOP_CENTER">
+                 <columnConstraints>
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                   <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                 </columnConstraints>
+                 <rowConstraints>
+                   <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                 </rowConstraints>
+                  <children>
+                     <VBox alignment="CENTER_RIGHT" prefHeight="200.0" prefWidth="100.0">
+                        <children>
+                           <Button fx:id="startButton" alignment="CENTER" mnemonicParsing="false" text="Start">
+                              <font>
+                                 <Font name="System Bold" size="20.0" />
+                              </font>
+                              <VBox.margin>
+                                 <Insets right="100.0" />
+                              </VBox.margin>
+                           </Button>
+                        </children>
+                     </VBox>
+                     <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="200.0" spacing="5.0" GridPane.columnIndex="1">
+                        <children>
+                           <Label text="Score:">
+                              <font>
+                                 <Font name="System Bold" size="20.0" />
+                              </font>
+                           </Label>
+                           <Label fx:id="scoreLabel">
+                              <font>
+                                 <Font name="System Bold" size="20.0" />
+                              </font>
+                           </Label>
+                        </children>
+                        <GridPane.margin>
+                           <Insets left="100.0" />
+                        </GridPane.margin>
+                     </HBox>
+                  </children>
+                  <VBox.margin>
+                     <Insets bottom="8.0" />
+                  </VBox.margin>
+               </GridPane>
+               <VBox fx:id="buttonsVBox" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="600.0" prefWidth="600.0">
+                  <children>
+                     <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="400.0" spacing="5.0" VBox.vgrow="ALWAYS">
+                        <children>
+                           <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0">
+                              <children>
+                                 <Button fx:id="button1" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" VBox.vgrow="ALWAYS" />
+                              </children>
+                           </VBox>
+                           <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0">
+                              <children>
+                                 <Button fx:id="button2" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" VBox.vgrow="ALWAYS" />
+                              </children>
+                           </VBox>
+                        </children>
+                        <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                        </VBox.margin>
+                     </HBox>
+                     <HBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="400.0" spacing="5.0">
+                        <children>
+                           <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                 <Button fx:id="button3" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" VBox.vgrow="ALWAYS" />
+                              </children>
+                           </VBox>
+                           <VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="300.0" prefWidth="300.0" HBox.hgrow="ALWAYS">
+                              <children>
+                                 <Button fx:id="button4" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" VBox.vgrow="ALWAYS" />
+                              </children>
+                           </VBox>
+                        </children>
+                        <VBox.margin>
+                           <Insets bottom="5.0" left="5.0" right="5.0" />
+                        </VBox.margin>
+                     </HBox>
+                  </children>
+                  <VBox.margin>
+                     <Insets left="100.0" right="100.0" />
+                  </VBox.margin>
+               </VBox>
+               <Label fx:id="gameOverLabel">
+                  <font>
+                     <Font name="Jokerman" size="25.0" />
+                  </font>
+               </Label>
+            </children>
+         </VBox>
+      </children></AnchorPane>
+</Scene>
