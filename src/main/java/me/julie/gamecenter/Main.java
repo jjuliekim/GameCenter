@@ -14,12 +14,12 @@ import java.util.Objects;
 public class Main extends Application {
     private static Main instance = null;
     private Stage mainStage = null;
-    private Parent menuScene = null;
-    private Parent minesweeperScene = null;
-    private Parent wordleScene = null;
-    private Parent simonScene = null;
-    // private Scene battleshipScene = null;
-    // private Scene cardMemoryScene = null;
+    private Parent menuRoot = null;
+    private Parent minesweeperRoot = null;
+    private Parent wordleRoot = null;
+    private Parent simonRoot = null;
+    // private Parent battleshipRoot = null;
+    // private Parent cardMemoryRoot = null;
 
     public static void main(String[] args) {
         launch();
@@ -31,23 +31,24 @@ public class Main extends Application {
         instance = this;
         mainStage = stage;
 
-        menuScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+        System.out.println("Loading Scenes");
+        menuRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("fxml/game-center.fxml")));
         System.out.println("Loaded Game Center");
-        minesweeperScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+        minesweeperRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("fxml/minesweeper.fxml")));
         System.out.println("Loaded Minesweeper");
-        wordleScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+        wordleRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("fxml/wordle-board.fxml")));
         System.out.println("Loaded Wordle");
-        simonScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+        simonRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
                 .getResource("fxml/simon.fxml")));
         System.out.println("Loaded Simon");
-        // battleshipScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("battleship.fxml")));
-        // cardMemoryScene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("card-memory.fxml")));
+        // battleshipRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("battleship.fxml")));
+        // cardMemoryRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("card-memory.fxml")));
 
         mainStage.setTitle("Games");
-        mainStage.setScene(new Scene(menuScene));
+        mainStage.setScene(menuRoot.getScene());
         mainStage.setMaximized(true);
         mainStage.show();
     }
@@ -64,16 +65,16 @@ public class Main extends Application {
         return mainStage;
     }
 
-    public Parent getMinesweeperScene() {
-        return minesweeperScene;
+    public Parent getMinesweeperRoot() {
+        return minesweeperRoot;
     }
 
-    public Parent getWordleScene() {
-        return wordleScene;
+    public Parent getWordleRoot() {
+        return wordleRoot;
     }
 
-    public Parent getSimonScene() {
-        return simonScene;
+    public Parent getSimonRoot() {
+        return simonRoot;
     }
 
     public static void delay(long millis, Runnable continuation) {
