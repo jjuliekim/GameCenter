@@ -26,11 +26,11 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'me.julie.gamecenter'
-    mainClass = 'me.julie.gamecenter.HelloApplication'
+    mainClass = 'me.julie.gamecenter.Main'
 }
 
 javafx {
-    version = '17.0.6'
+    version = '20.0.1'
     modules = ['javafx.controls', 'javafx.fxml']
 }
 

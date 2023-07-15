@@ -6,4 +6,6 @@ module me.julie.gamecenter {
 
     opens me.julie.gamecenter to javafx.fxml;
     exports me.julie.gamecenter;
+    exports me.julie.gamecenter.controller;
+    opens me.julie.gamecenter.controller to javafx.fxml;
 }
