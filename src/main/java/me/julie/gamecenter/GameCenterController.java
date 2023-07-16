@@ -4,7 +4,6 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.VBox;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -29,9 +28,9 @@ public class GameCenterController {
     public void initialize() {
         prevButton.setFocusTraversable(false);
         gameIndex = 0;
-        listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Battleship", "Memory Game"));
+        listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Memory Game", "Battleship"));
         listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.jpg",
-                "images/simonPic.jpg", "images/battleshipPic2.jpg", "images/memoryPic2.png"));
+                "images/simonPic.jpg", "images/memoryPic.png", "images/battleshipPic2.jpg"));
         gameName.setText(listOfGames.get(gameIndex));
         image.setImage(Main.getImage(listOfImages.get(gameIndex)));
 
@@ -60,6 +59,7 @@ public class GameCenterController {
                 case 0 -> Main.getInstance().loadMinesweeper();
                 case 1 -> Main.getInstance().loadWordle();
                 case 2 -> Main.getInstance().loadSimon();
+                case 3 -> Main.getInstance().loadMemoryMenu();
                 default -> {
                 }
             }

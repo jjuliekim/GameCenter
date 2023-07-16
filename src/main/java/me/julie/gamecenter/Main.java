@@ -13,6 +13,7 @@ import java.util.Objects;
 public class Main extends Application {
     private static Main instance;
     private Stage mainStage;
+    private static Difficulty difficulty;
 
     public static void main(String[] args) {
         launch();
@@ -20,7 +21,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        System.out.println("Starting Game Center");
         instance = this;
         mainStage = stage;
 
@@ -44,6 +44,14 @@ public class Main extends Application {
 
     public void loadWordle() {
         loadFXML("wordle-board");
+    }
+
+    public void loadMemory() {
+        loadFXML("memory");
+    }
+
+    public void loadMemoryMenu() {
+        loadFXML("menu");
     }
 
     private void loadFXML(String fxmlFile) {
@@ -82,5 +90,13 @@ public class Main extends Application {
         };
         sleeper.setOnSucceeded(event -> continuation.run());
         new Thread(sleeper).start();
+    }
+
+    public static Difficulty getDifficulty() {
+        return difficulty;
+    }
+
+    public static void setDifficulty(Difficulty difficulty) {
+        Main.difficulty = difficulty;
     }
 }

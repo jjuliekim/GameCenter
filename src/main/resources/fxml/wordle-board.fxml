@@ -14,7 +14,7 @@
 <Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.WordleController">
     <AnchorPane prefHeight="200" prefWidth="200">
       <children>
-         <VBox fx:id="mainVbox" alignment="TOP_CENTER" prefHeight="620.0" prefWidth="400.0" spacing="25.0">
+         <VBox fx:id="mainVbox" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="400.0" spacing="20.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <children>
                <Label text="wordle" textFill="#e7f6ff">
                   <font>
