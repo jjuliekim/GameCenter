@@ -1,4 +1,4 @@
-package me.julie.gamecenter.Wordle;
+package me.julie.gamecenter.wordle;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
@@ -47,7 +47,7 @@ public class WordleController {
         newGameButton.setFocusTraversable(false);
         newGameButton.setOnAction(e -> handleNewGame());
         mainVbox.setStyle("-fx-background-color: #5d819d");
-        scanner = new Scanner(Objects.requireNonNull(WordleController.class.getClassLoader()
+        scanner = new Scanner(Objects.requireNonNull(WordleController.class
                 .getResourceAsStream("text/dictionary.txt")));
         dictionary = new ArrayList<>();
         while (scanner.hasNext()) {
@@ -147,7 +147,7 @@ public class WordleController {
 
     // get random word from words.txt
     private void generateAnswer() {
-        scanner = new Scanner(Objects.requireNonNull(WordleController.class.getClassLoader()
+        scanner = new Scanner(Objects.requireNonNull(WordleController.class
                 .getResourceAsStream("text/words.txt")));
         ArrayList<String> words = new ArrayList<>();
         while (scanner.hasNext()) {

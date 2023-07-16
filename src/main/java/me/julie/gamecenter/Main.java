@@ -6,8 +6,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import me.julie.gamecenter.Memory.Difficulty;
-import me.julie.gamecenter.Wordle.WordleController;
+import me.julie.gamecenter.memory.Difficulty;
+import me.julie.gamecenter.wordle.WordleController;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -58,7 +58,7 @@ public class Main extends Application {
 
     private void loadFXML(String fxmlFile) {
         try {
-            final Scene scene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+            final Scene scene = FXMLLoader.load(Objects.requireNonNull(getClass()
                     .getResource("fxml/" + fxmlFile + ".fxml")));
             mainStage.setScene(scene);
             if (fxmlFile.equals("wordle-board")) {
@@ -70,7 +70,7 @@ public class Main extends Application {
     }
 
     public static Image getImage(String s) {
-        return new Image(Objects.requireNonNull(Main.class.getClassLoader().getResourceAsStream(s)));
+        return new Image(Objects.requireNonNull(Main.class.getResourceAsStream(s)));
     }
 
     public static Main getInstance() {

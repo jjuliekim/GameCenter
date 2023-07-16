@@ -4,14 +4,14 @@ module me.julie.gamecenter {
 
     requires org.controlsfx.controls;
 
-    opens me.julie.gamecenter to javafx.fxml;
+    opens me.julie.gamecenter;
     exports me.julie.gamecenter;
-    exports me.julie.gamecenter.Minesweeper;
-    opens me.julie.gamecenter.Minesweeper to javafx.fxml;
-    exports me.julie.gamecenter.Wordle;
-    opens me.julie.gamecenter.Wordle to javafx.fxml;
-    exports me.julie.gamecenter.Memory;
-    opens me.julie.gamecenter.Memory to javafx.fxml;
-    exports me.julie.gamecenter.Simon;
-    opens me.julie.gamecenter.Simon to javafx.fxml;
+    exports me.julie.gamecenter.minesweeper;
+    opens me.julie.gamecenter.minesweeper;
+    exports me.julie.gamecenter.wordle;
+    opens me.julie.gamecenter.wordle;
+    exports me.julie.gamecenter.memory;
+    opens me.julie.gamecenter.memory;
+    exports me.julie.gamecenter.simon;
+    opens me.julie.gamecenter.simon;
 }

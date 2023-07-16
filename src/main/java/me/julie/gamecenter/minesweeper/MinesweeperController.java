@@ -1,4 +1,4 @@
-package me.julie.gamecenter.Minesweeper;
+package me.julie.gamecenter.minesweeper;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;

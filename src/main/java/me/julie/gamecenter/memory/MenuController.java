@@ -1,4 +1,4 @@
-package me.julie.gamecenter.Memory;
+package me.julie.gamecenter.memory;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

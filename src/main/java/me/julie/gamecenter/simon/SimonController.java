@@ -1,4 +1,4 @@
-package me.julie.gamecenter.Simon;
+package me.julie.gamecenter.simon;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

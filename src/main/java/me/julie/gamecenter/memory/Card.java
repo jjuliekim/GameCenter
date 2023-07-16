@@ -1,4 +1,4 @@
-package me.julie.gamecenter.Memory;
+package me.julie.gamecenter.memory;
 
 public class Card {
     private final int value;
