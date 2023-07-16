@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.MemoryController">
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.Memory.MemoryController">
     <AnchorPane prefHeight="600.0" prefWidth="1000.0">
       <children>
          <VBox fx:id="mainVBox" alignment="TOP_CENTER" prefHeight="600.0" prefWidth="1000.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">

@@ -1,4 +1,4 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Wordle;
 
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;

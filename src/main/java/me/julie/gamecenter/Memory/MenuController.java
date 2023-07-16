@@ -1,7 +1,8 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Memory;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import me.julie.gamecenter.Main;
 
 public class MenuController {
     @FXML

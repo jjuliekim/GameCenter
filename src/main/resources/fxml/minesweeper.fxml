@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.MinesweeperController">
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.Minesweeper.MinesweeperController">
     <AnchorPane>
       <children>
          <VBox fx:id="mainVbox" alignment="TOP_CENTER" minHeight="299.2" minWidth="264.0">

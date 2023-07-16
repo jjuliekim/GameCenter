@@ -1,9 +1,10 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Simon;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.VBox;
+import me.julie.gamecenter.Main;
 
 import java.util.ArrayList;
 import java.util.Objects;

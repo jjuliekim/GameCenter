@@ -1,4 +1,4 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Memory;
 
 public enum Difficulty {
     EASY,

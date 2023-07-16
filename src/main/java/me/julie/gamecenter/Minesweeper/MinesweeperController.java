@@ -1,9 +1,10 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Minesweeper;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.*;
+import me.julie.gamecenter.Main;
 
 import java.util.Random;
 
@@ -245,22 +246,22 @@ public class MinesweeperController {
 
         if (coord.getNum() == 0) { // uncover surrounding 0 cells
             switch (random.nextInt(4)) {
-                case 0:
+                case 0 -> {
                     coord.getButton().setText("🌸");
                     coord.getButton().setStyle("-fx-text-fill: #ea7171; -fx-background-color: #efe4f4");
-                    break;
-                case 1:
+                }
+                case 1 -> {
                     coord.getButton().setText("🌻");
                     coord.getButton().setStyle("-fx-text-fill: #d5ac36; -fx-background-color: #efe4f4");
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     coord.getButton().setText("🌼");
                     coord.getButton().setStyle("-fx-text-fill: #692f87; -fx-background-color: #efe4f4");
-                    break;
-                default:
+                }
+                default -> {
                     coord.getButton().setText("🌷");
                     coord.getButton().setStyle("-fx-text-fill: #a90707; -fx-background-color: #efe4f4");
-                    break;
+                }
             }
             Coord left;
             Coord right;

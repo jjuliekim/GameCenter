@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.SimonController">
+<Scene xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.julie.gamecenter.Simon.SimonController">
     <AnchorPane prefHeight="200" prefWidth="200">
       <children>
          <VBox fx:id="mainVbox" alignment="TOP_CENTER" prefHeight="800.0" prefWidth="800.0" spacing="10.0">

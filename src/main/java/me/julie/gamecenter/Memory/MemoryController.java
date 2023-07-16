@@ -1,4 +1,4 @@
-package me.julie.gamecenter;
+package me.julie.gamecenter.Memory;
 
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
@@ -10,6 +10,7 @@ import javafx.scene.control.Label;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+import me.julie.gamecenter.Main;
 
 import java.util.ArrayList;
 import java.util.Arrays;
