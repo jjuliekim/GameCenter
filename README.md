@@ -12,3 +12,5 @@ or by going to [the Actions tab](https://github.com/jjuliekim/GameCenter/actions
 the latest workflow run, and downloading the artifact.
 
 Then, extract the ZIP file and run the `bin/GameCenter` (Linux/Mac) or `bin/GameCenter.bat` (Windows) file.
+
+*Note: Mac/Linux has not been tested yet*
