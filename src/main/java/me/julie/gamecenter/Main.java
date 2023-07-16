@@ -70,7 +70,7 @@ public class Main extends Application {
     }
 
     public static Image getImage(String s) {
-        return new Image("./" + s);
+        return new Image(Objects.requireNonNull(Main.class.getClassLoader().getResourceAsStream(s)));
     }
 
     public static Main getInstance() {
