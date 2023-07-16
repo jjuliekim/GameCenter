@@ -11,8 +11,6 @@ import java.util.Arrays;
 
 public class GameCenterController {
     @FXML
-    private VBox mainVBox;
-    @FXML
     private Label gameName;
     @FXML
     private ImageView image;
@@ -29,6 +27,7 @@ public class GameCenterController {
 
     @FXML
     public void initialize() {
+        prevButton.setFocusTraversable(false);
         gameIndex = 0;
         listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Battleship", "Memory Game"));
         listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.jpg",

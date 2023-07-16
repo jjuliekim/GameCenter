@@ -3,7 +3,6 @@ package me.julie.gamecenter;
 import javafx.application.Application;
 import javafx.concurrent.Task;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
@@ -14,15 +13,13 @@ import java.util.Objects;
 public class Main extends Application {
     private static Main instance;
     private Stage mainStage;
-    // private Parent battleshipRoot = null;
-    // private Parent cardMemoryRoot = null;
 
     public static void main(String[] args) {
         launch();
     }
 
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         System.out.println("Starting Game Center");
         instance = this;
         mainStage = stage;
