@@ -48,7 +48,7 @@ public class WordleController {
         newGameButton.setOnAction(e -> handleNewGame());
         mainVbox.setStyle("-fx-background-color: #5d819d");
         scanner = new Scanner(Objects.requireNonNull(WordleController.class.getClassLoader()
-                .getResourceAsStream("dictionary.txt")));
+                .getResourceAsStream("text/dictionary.txt")));
         dictionary = new ArrayList<>();
         while (scanner.hasNext()) {
             dictionary.add(scanner.nextLine());
@@ -148,7 +148,7 @@ public class WordleController {
     // get random word from words.txt
     private void generateAnswer() {
         scanner = new Scanner(Objects.requireNonNull(WordleController.class.getClassLoader()
-                .getResourceAsStream("words.txt")));
+                .getResourceAsStream("text/words.txt")));
         ArrayList<String> words = new ArrayList<>();
         while (scanner.hasNext()) {
             words.add(scanner.nextLine());

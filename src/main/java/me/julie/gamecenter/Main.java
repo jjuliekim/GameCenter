@@ -12,12 +12,8 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
-    private static Main instance = null;
-    private Stage mainStage = null;
-    private Parent menuRoot = null;
-    private Parent minesweeperRoot = null;
-    private Parent wordleRoot = null;
-    private Parent simonRoot = null;
+    private static Main instance;
+    private Stage mainStage;
     // private Parent battleshipRoot = null;
     // private Parent cardMemoryRoot = null;
 
@@ -31,26 +27,36 @@ public class Main extends Application {
         instance = this;
         mainStage = stage;
 
-        System.out.println("Loading Scenes");
-        menuRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("fxml/game-center.fxml")));
-        System.out.println("Loaded Game Center");
-        minesweeperRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("fxml/minesweeper.fxml")));
-        System.out.println("Loaded Minesweeper");
-        wordleRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("fxml/wordle-board.fxml")));
-        System.out.println("Loaded Wordle");
-        simonRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
-                .getResource("fxml/simon.fxml")));
-        System.out.println("Loaded Simon");
-        // battleshipRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("battleship.fxml")));
-        // cardMemoryRoot = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader().getResource("card-memory.fxml")));
-
         mainStage.setTitle("Games");
-        mainStage.setScene(menuRoot.getScene());
+        loadMenu();
         mainStage.setMaximized(true);
         mainStage.show();
+    }
+
+    public void loadMenu() {
+        loadFXML("game-center");
+    }
+
+    public void loadMinesweeper() {
+        loadFXML("minesweeper");
+    }
+
+    public void loadSimon() {
+        loadFXML("simon");
+    }
+
+    public void loadWordle() {
+        loadFXML("wordle-board");
+    }
+
+    private void loadFXML(String fxmlFile) {
+        try {
+            final Scene scene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
+                    .getResource("fxml/" + fxmlFile + ".fxml")));
+            mainStage.setScene(scene);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     public static Image getImage(String s) {
@@ -63,18 +69,6 @@ public class Main extends Application {
 
     public Stage getStage() {
         return mainStage;
-    }
-
-    public Parent getMinesweeperRoot() {
-        return minesweeperRoot;
-    }
-
-    public Parent getWordleRoot() {
-        return wordleRoot;
-    }
-
-    public Parent getSimonRoot() {
-        return simonRoot;
     }
 
     public static void delay(long millis, Runnable continuation) {

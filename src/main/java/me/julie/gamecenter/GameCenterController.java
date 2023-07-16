@@ -6,7 +6,6 @@ import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -30,7 +29,6 @@ public class GameCenterController {
 
     @FXML
     public void initialize() {
-        mainVBox.setStyle("-fx-background-color: #fdeee6");
         gameIndex = 0;
         listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Battleship", "Memory Game"));
         listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.jpg",
@@ -60,12 +58,9 @@ public class GameCenterController {
 
         playButton.setOnAction(e -> {
             switch (gameIndex) {
-                case 0 -> Main.getInstance().getStage().getScene()
-                            .setRoot(Main.getInstance().getMinesweeperRoot());
-                case 1 -> Main.getInstance().getStage().getScene()
-                        .setRoot(Main.getInstance().getWordleRoot());
-                case 2 -> Main.getInstance().getStage().getScene()
-                        .setRoot(Main.getInstance().getSimonRoot());
+                case 0 -> Main.getInstance().loadMinesweeper();
+                case 1 -> Main.getInstance().loadWordle();
+                case 2 -> Main.getInstance().loadSimon();
                 default -> {
                 }
             }
