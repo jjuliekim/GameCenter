@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import me.julie.gamecenter.Memory.Difficulty;
+import me.julie.gamecenter.Wordle.WordleController;
 
 import java.io.IOException;
 import java.util.Objects;
@@ -60,6 +61,9 @@ public class Main extends Application {
             final Scene scene = FXMLLoader.load(Objects.requireNonNull(getClass().getClassLoader()
                     .getResource("fxml/" + fxmlFile + ".fxml")));
             mainStage.setScene(scene);
+            if (fxmlFile.equals("wordle-board")) {
+                scene.setOnKeyPressed(e -> WordleController.getInstance().handleKeys(e));
+            }
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
