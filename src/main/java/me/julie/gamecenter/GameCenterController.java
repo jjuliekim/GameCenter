@@ -29,8 +29,8 @@ public class GameCenterController {
         prevButton.setFocusTraversable(false);
         gameIndex = 0;
         listOfGames = new ArrayList<>(Arrays.asList("Minesweeper", "Wordle", "Simon", "Memory Game", "Battleship"));
-        listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.jpg",
-                "images/simonPic.jpg", "images/memoryPic.png", "images/battleshipPic2.jpg"));
+        listOfImages = new ArrayList<>(Arrays.asList("images/minesweeperPic.png", "images/wordlePic.png",
+                "images/simonPic.png", "images/memoryPic.png", "images/battleshipPic2.jpg"));
         gameName.setText(listOfGames.get(gameIndex));
         image.setImage(Main.getImage(listOfImages.get(gameIndex)));
 
